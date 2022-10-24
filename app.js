@@ -1,5 +1,4 @@
 const { app, BrowserWindow, ipc } = require("electron");
-const { exec } = require("child_process");
 const path = require("path");
 
 // const { getNodeVersion } = require("./node-proc.js");
@@ -24,7 +23,6 @@ function main() {
     app.on("ready", () => {
         // console.log(getNodeVersion());
         createMainWindow();
-        exec(`echo 'App ready' >> log.txt`);
     });
     
     app.on("window-all-closed", () => {
